@@ -31,8 +31,8 @@
 </header>
 
 <div class="w3-container w3-padding-32" id="about">
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-  <p style="padding: 20px">Whether it's a installation, to repair broken chandelier crystals and bent arms, electrify centuries-old antiques, and hang fixtures—no matter the weight or size ElectriCorp can make it happen. Rated "Best Chandelier and Lighting Fixture Repair" by D Magazine. You can be assured you will receive nothing less than the best with our services.
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">About</h3>
+  <p style="padding: 20px; font-size: 1.5em; text-align: center ">Whether it's a installation, to repair broken chandelier crystals and bent arms, electrify centuries-old antiques, and hang fixtures no matter the weight or size ElectriCorp can make it happen. Rated "Best Chandelier and Lighting Fixture Repair" by D Magazine. You can be assured you will receive nothing less than the best with our services.
   </p>
 </div>
 
@@ -108,6 +108,28 @@
 <br>
 <br>
 <br>
+
+<div class="w3-content" style="max-width:85%; background-color: #CCCCCC; opacity: .70">
+  <div class="mySlides w3-container">
+    <h1><b>"Best in the business"</b></h1>
+    <h1><i>- Dallas Stars</i></h1>
+  </div>
+
+  <div class="mySlides w3-container">
+    <h1><b>"Fair price and great service!""</b></h1>
+    <h1><i>- Random Drunk Guy</i></h1>
+  </div>
+
+  <div class="mySlides w3-container">
+    <h1><b>"Repair was fast and affordable!!""</b></h1>
+    <h1><i>- Another Drunk Guy</i></h1>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l6 m6 w3-margin-bottom">
       <img src="../img/garyChapman.jpg" alt="Shawn"  style="width:20%; height: 20%;">
@@ -119,8 +141,8 @@
     <div class="w3-col l6 m6 w3-margin-bottom">
       <img src="../img/garyChapman.jpg" alt="Gary" style="width:20%; height: 20%;">
       <h3>Gary Chapman</h3>
-      <p class="w3-opacity">Installer</p>
-      <p>Operating and working partner, responsible for installation, invoiceing and scheduling. Gary will insure your experience is professional and second to none. </p>
+      <p class="w3-opacity">Partner & Installer</p>
+      <p>Operating and working partner of several years, responsible for installation, invoiceing and scheduling. Gary will insure your experience is professional and second to none. </p>
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
     <!-- <div class="w3-col l3 m6 w3-margin-bottom">
@@ -143,11 +165,14 @@
   <div class="w3-container w3-padding-32" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Lets get in touch and talk about your and our next project.</p>
-    <form action="/action_page.php" target="_blank">
+    <form action="https://formspree.io/garrett.chapman@yahoo.com"  method="POST" target="_blank">
+
       <input class="w3-input" type="text" placeholder="Name" required name="Name">
       <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="text" placeholder="Phone #" required name="Phone">
       <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <!-- <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment" style="height:50px; resize: vertical;"> -->
+      <textarea class="w3-input w3-section" name="subject" placeholder="Comment" style="height:200px; width: 100%" required name ="Comment"></textarea>
       <button class="w3-button w3-black w3-section" type="submit">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
@@ -164,7 +189,22 @@
   <p>Copyright ElectriCorp 2018</p>
 </footer>
 
+<script>
+var slideIndex = 0;
+carousel();
 
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 8000);
+}
+</script>
 
 </body>
 </html>
